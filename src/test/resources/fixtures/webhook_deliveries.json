@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "id": "dddddddd-dddd-4ddd-8ddd-111111111111",
+      "endpoint_id": "77777777-7777-4777-8777-111111111111",
+      "organization_id": "00000000-0000-4000-8000-0000000000aa",
+      "event_type": "campaign.reply_received",
+      "event_id": "00000000-0000-4000-8000-000000000001",
+      "payload": {
+        "id": "00000000-0000-4000-8000-000000000001",
+        "event_type": "campaign.reply_received",
+        "organization_id": "00000000-0000-4000-8000-0000000000aa",
+        "created_at": "2026-11-12T14:30:00Z",
+        "data": {}
+      },
+      "status": "delivered",
+      "attempt_count": 1,
+      "max_attempts": 8,
+      "next_attempt_at": "2026-11-12T14:30:00Z",
+      "last_attempt_at": "2026-11-12T14:30:00Z",
+      "response_status": 200,
+      "created_at": "2026-11-12T14:30:00Z",
+      "updated_at": "2026-11-12T14:30:00Z"
+    }
+  ],
+  "pagination": {
+    "next_cursor": "o1_NTA",
+    "has_more": true
+  }
+}

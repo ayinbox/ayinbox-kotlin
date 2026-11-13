@@ -1,0 +1,38 @@
+[
+  {
+    "id": "44444444-4444-4444-8444-111111111111",
+    "name": "Email 1",
+    "subject": "Quick question",
+    "body_plain": "Hi {{first_name}},\n\nShort note.\n",
+    "body_html": "<p>Hi {{first_name}},</p><p>Short note.</p>",
+    "body_sync": true,
+    "body_code": false,
+    "wait_after": 0,
+    "position": 0,
+    "thread_reply": false,
+    "x": 0,
+    "y": 0,
+    "conditions": {},
+    "kind": "email",
+    "updated_at": "2026-11-01T09:00:00Z",
+    "created_at": "2026-11-01T09:00:00Z"
+  },
+  {
+    "id": "44444444-4444-4444-8444-222222222222",
+    "name": "Email 2",
+    "subject": "",
+    "body_plain": "Hi {{first_name}},\n\nShort note.\n",
+    "body_html": "<p>Hi {{first_name}},</p><p>Short note.</p>",
+    "body_sync": true,
+    "body_code": false,
+    "wait_after": 3,
+    "position": 1,
+    "thread_reply": true,
+    "x": 0,
+    "y": 200,
+    "conditions": {},
+    "kind": "email",
+    "updated_at": "2026-11-01T09:00:00Z",
+    "created_at": "2026-11-01T09:00:00Z"
+  }
+]

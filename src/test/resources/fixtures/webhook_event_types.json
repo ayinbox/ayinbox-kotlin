@@ -1,0 +1,18 @@
+{
+  "event_types": [
+    {
+      "type": "campaign.reply_received",
+      "category": "campaign",
+      "description": "A contact replied to a campaign email.",
+      "firehose": false,
+      "deprecated": false
+    },
+    {
+      "type": "campaign.email_opened",
+      "category": "campaign",
+      "description": "A campaign email was opened.",
+      "firehose": true,
+      "deprecated": false
+    }
+  ]
+}

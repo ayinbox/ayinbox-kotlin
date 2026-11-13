@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "id": "bbbbbbbb-bbbb-4bbb-8bbb-111111111111",
+      "email_account_id": "33333333-3333-4333-8333-111111111111",
+      "to": [
+        "lee@example.com"
+      ],
+      "cc": [],
+      "bcc": [],
+      "subject": "Following up",
+      "body": "Hi Lee,",
+      "body_html": "",
+      "updated_at": "2026-11-12T14:30:00Z",
+      "created_at": "2026-11-12T14:30:00Z"
+    }
+  ]
+}

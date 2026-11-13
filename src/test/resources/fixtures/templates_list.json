@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "id": "66666666-6666-4666-8666-111111111111",
+      "organization_id": "00000000-0000-4000-8000-0000000000aa",
+      "user_id": "00000000-0000-4000-8000-0000000000bb",
+      "name": "Pricing answer",
+      "subject": "Re: pricing",
+      "body_html": "<p>Here is how pricing works.</p>",
+      "body_plain": "Here is how pricing works.",
+      "position": 0,
+      "created_at": "2026-11-01T09:00:00Z",
+      "updated_at": "2026-11-12T14:30:00Z"
+    }
+  ]
+}

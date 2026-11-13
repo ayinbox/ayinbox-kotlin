@@ -1,0 +1,498 @@
+{
+  "note": "Invented data only. Paths include the /v1 prefix as the server sees them. A body of null means no body (204); an empty string means a 200 with an empty body; an object is the literal JSON body. Error fixtures list their own status and headers.",
+  "default_success_headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "X-Request-Id": "req-fixture-0001",
+    "API-Version": "v1",
+    "X-RateLimit-Limit": "60",
+    "X-RateLimit-Remaining": "59",
+    "X-RateLimit-Policy": "60;w=60"
+  },
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/v1/me",
+      "status": 200,
+      "body": "me.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/campaigns",
+      "status": 200,
+      "body": "campaigns_list.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/campaigns?cursor=c1_ZmFrZS1jdXJzb3ItcGFnZS0y",
+      "status": 200,
+      "body": "campaigns_list_page2.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/campaigns/{id}",
+      "status": 200,
+      "body": "campaign.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/campaigns",
+      "status": 200,
+      "body": "campaign.json"
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/campaigns/{id}",
+      "status": 200,
+      "body": "campaign.json"
+    },
+    {
+      "method": "DELETE",
+      "path": "/v1/campaigns/{id}",
+      "status": 204,
+      "body": null
+    },
+    {
+      "method": "POST",
+      "path": "/v1/campaigns/{id}/start",
+      "status": 200,
+      "body": "campaign_start.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/campaigns/{id}/stop",
+      "status": 200,
+      "body": "campaign_stop.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/campaigns/{id}/duplicate",
+      "status": 201,
+      "body": "campaign.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/campaigns-overview",
+      "status": 200,
+      "body": "campaigns_overview.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/campaigns/{id}/steps",
+      "status": 200,
+      "body": "campaign_steps.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/campaigns/{id}/steps",
+      "status": 200,
+      "body": "campaign_step.json"
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/campaigns/{id}/steps/{stepId}",
+      "status": 200,
+      "body": "campaign_step.json"
+    },
+    {
+      "method": "DELETE",
+      "path": "/v1/campaigns/{id}/steps/{stepId}",
+      "status": 200,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/v1/campaigns/{id}/leads/{contactId}/hold",
+      "status": 200,
+      "body": "lead_hold.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/campaigns/{id}/leads/{contactId}/pause",
+      "status": 200,
+      "body": "lead_hold.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/campaigns/{id}/leads/{contactId}/resume",
+      "status": 200,
+      "body": "lead_hold.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/contacts/search",
+      "status": 200,
+      "body": "contacts_list.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/contacts/search (campaign_ids=[one])",
+      "status": 200,
+      "body": "campaign_leads_list.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/contacts/{id}",
+      "status": 200,
+      "body": "contact.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/contacts",
+      "status": 200,
+      "body": "contacts_create.json"
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/contacts/{id}",
+      "status": 200,
+      "body": "contacts_create.json[0]"
+    },
+    {
+      "method": "DELETE",
+      "path": "/v1/contacts/{id}",
+      "status": 204,
+      "body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/v1/contacts",
+      "status": 204,
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/v1/emails",
+      "status": 200,
+      "body": "mailboxes_list.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/emails/{id}",
+      "status": 200,
+      "body": "mailbox.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/emails/{id}/sync",
+      "status": 200,
+      "body": "mailbox_sync.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/unibox",
+      "status": 200,
+      "body": "unibox_threads.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/unibox/thread",
+      "status": 200,
+      "body": "unibox_thread.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/unibox/{id}",
+      "status": 200,
+      "body": "unibox_message.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/unibox/count",
+      "status": 200,
+      "body": "unibox_count.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/unibox/reply",
+      "status": 200,
+      "body": "unibox_reply.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/unibox/drafts",
+      "status": 200,
+      "body": "unibox_drafts.json"
+    },
+    {
+      "method": "PUT",
+      "path": "/v1/unibox/drafts/{id}",
+      "status": 200,
+      "body": {
+        "id": "bbbbbbbb-bbbb-4bbb-8bbb-111111111111"
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/v1/unibox/drafts/{id}",
+      "status": 200,
+      "body": {
+        "deleted": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/v1/unibox/agent-drafts",
+      "status": 200,
+      "body": "unibox_agent_drafts.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/unibox/agent-drafts/{id}/approve",
+      "status": 200,
+      "body": "unibox_reply.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/unibox/agent-drafts/{id}/discard",
+      "status": 200,
+      "body": {
+        "status": "discarded"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/v1/templates",
+      "status": 200,
+      "body": "templates_list.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/templates/{id}",
+      "status": 200,
+      "body": "template.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/templates",
+      "status": 200,
+      "body": "template.json"
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/templates/{id}",
+      "status": 200,
+      "body": "template.json"
+    },
+    {
+      "method": "DELETE",
+      "path": "/v1/templates/{id}",
+      "status": 204,
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/v1/webhooks",
+      "status": 200,
+      "body": "webhooks_list.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/webhooks",
+      "status": 201,
+      "body": "webhook_create.json"
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/webhooks/{id}",
+      "status": 200,
+      "body": "webhooks_list.json#endpoints[0]"
+    },
+    {
+      "method": "DELETE",
+      "path": "/v1/webhooks/{id}",
+      "status": 204,
+      "body": null
+    },
+    {
+      "method": "POST",
+      "path": "/v1/webhooks/{id}/rotate-secret",
+      "status": 200,
+      "body": "webhook_rotate_secret.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/webhooks/{id}/verify",
+      "status": 202,
+      "body": {
+        "status": "challenge_sent"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/v1/webhooks/event-types",
+      "status": 200,
+      "body": "webhook_event_types.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/webhooks/deliveries",
+      "status": 200,
+      "body": "webhook_deliveries.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/analytics/dashboard",
+      "status": 200,
+      "body": "analytics_dashboard.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/analytics/campaigns/{id}",
+      "status": 200,
+      "body": "analytics_campaign.json"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/suppressions",
+      "status": 200,
+      "body": "suppressions_list.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/suppressions",
+      "status": 200,
+      "body": "suppressions_add.json"
+    },
+    {
+      "method": "DELETE",
+      "path": "/v1/suppressions/{id}",
+      "status": 204,
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/v1/ai/tools",
+      "status": 200,
+      "body": "ai_tools_list.json"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/ai/tools/{name}/call",
+      "status": 200,
+      "body": "ai_tool_call.json"
+    }
+  ],
+  "errors": {
+    "errors/400_bad_request.json": {
+      "status": 400,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001"
+      }
+    },
+    "errors/400_invalid_cursor.json": {
+      "status": 400,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001"
+      }
+    },
+    "errors/401_unauthorized.json": {
+      "status": 401,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001"
+      }
+    },
+    "errors/401_api_key_holder_left.json": {
+      "status": 401,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001"
+      }
+    },
+    "errors/402_insufficient_credits.json": {
+      "status": 402,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001"
+      }
+    },
+    "errors/403_forbidden.json": {
+      "status": 403,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001"
+      }
+    },
+    "errors/403_api_key_mailbox_limited.json": {
+      "status": 403,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001"
+      }
+    },
+    "errors/404_not_found.json": {
+      "status": 404,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001"
+      }
+    },
+    "errors/409_conflict.json": {
+      "status": 409,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001"
+      }
+    },
+    "errors/409_idempotency_outcome_unknown.json": {
+      "status": 409,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001"
+      }
+    },
+    "errors/409_idempotent_secret_withheld.json": {
+      "status": 409,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001"
+      }
+    },
+    "errors/422_unprocessable.json": {
+      "status": 422,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001"
+      }
+    },
+    "errors/429_api_key_rate_limited.json": {
+      "status": 429,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001",
+        "Retry-After": "12",
+        "X-RateLimit-Limit": "60",
+        "X-RateLimit-Remaining": "0",
+        "X-RateLimit-Policy": "60;w=60"
+      }
+    },
+    "errors/429_category_rate_limited.json": {
+      "status": 429,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Retry-After": "12",
+        "X-RateLimit-Limit": "100",
+        "X-RateLimit-Remaining": "0",
+        "X-RateLimit-Reset": "1700000060"
+      }
+    },
+    "errors/500_internal_error.json": {
+      "status": 500,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001"
+      }
+    },
+    "errors/503_service_unavailable.json": {
+      "status": 503,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Request-Id": "req-fixture-0001",
+        "Retry-After": "5"
+      }
+    }
+  },
+  "webhook_signature": "webhook_signature.json"
+}

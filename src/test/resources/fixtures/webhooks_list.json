@@ -1,0 +1,37 @@
+{
+  "endpoints": [
+    {
+      "id": "77777777-7777-4777-8777-111111111111",
+      "organization_id": "00000000-0000-4000-8000-0000000000aa",
+      "url": "https://hooks.example.com/ayinbox",
+      "description": "CRM sync",
+      "event_types": [
+        "campaign.reply_received"
+      ],
+      "enabled": true,
+      "consecutive_failures": 0,
+      "created_by": "00000000-0000-4000-8000-0000000000bb",
+      "ownership_confirmed": true,
+      "created_at": "2026-11-01T09:00:00Z",
+      "updated_at": "2026-11-01T09:00:00Z",
+      "verified_at": "2026-11-01T09:00:00Z",
+      "last_success_at": "2026-11-12T14:30:00Z"
+    }
+  ],
+  "event_types": [
+    {
+      "type": "campaign.reply_received",
+      "category": "campaign",
+      "description": "A contact replied to a campaign email.",
+      "firehose": false,
+      "deprecated": false
+    },
+    {
+      "type": "campaign.email_opened",
+      "category": "campaign",
+      "description": "A campaign email was opened.",
+      "firehose": true,
+      "deprecated": false
+    }
+  ]
+}

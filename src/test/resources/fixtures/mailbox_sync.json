@@ -1,0 +1,17 @@
+{
+  "state": {
+    "backfill_status": "complete",
+    "backfill_cursor": {},
+    "backfill_synced": 1200,
+    "deferred": 0,
+    "last_synced_at": "2026-11-12T14:30:00Z"
+  },
+  "policy": {
+    "backfill_days": 30,
+    "backfill_messages": 5000,
+    "daily_messages": 2000,
+    "org_daily_messages": 20000
+  },
+  "skip_folders": [],
+  "folders": []
+}

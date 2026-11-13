@@ -1,0 +1,22 @@
+{
+  "period": "7d",
+  "overall_stats": {
+    "total_emails_sent": 420,
+    "total_opens": 0,
+    "machine_opens": 0,
+    "total_clicks": 0,
+    "machine_clicks": 0,
+    "total_replies": 21,
+    "total_bounces": 3,
+    "open_rate": 0,
+    "click_rate": 0,
+    "reply_rate": 5.0,
+    "bounce_rate": 0.71,
+    "active_campaigns": 1,
+    "active_accounts": 2
+  },
+  "recent_activity": [],
+  "top_campaigns": [],
+  "account_health": {},
+  "daily_trend": []
+}
