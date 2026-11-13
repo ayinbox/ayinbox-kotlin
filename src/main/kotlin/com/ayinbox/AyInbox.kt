@@ -289,6 +289,7 @@ class AyInbox(
             ignoreUnknownKeys = true
             explicitNulls = false
             coerceInputValues = true
+            encodeDefaults = true
             isLenient = true
             namingStrategy = JsonNamingStrategy.SnakeCase
         }
